@@ -8,7 +8,6 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 
-# --- STEP 0: Setup ---
 os.environ["SSL_CERT_FILE"] = certifi.where()
 load_dotenv()
 
@@ -72,3 +71,4 @@ for event in events:
     if "messages" in event:
         last_msg = event["messages"][-1]
         print(f"[{last_msg.type.upper()}]: {last_msg.content}")
+
