@@ -24,7 +24,7 @@ def get_word_length(word: str) -> int:
 
 @tool
 def calculate_circle_area(radius: float) -> float:
-    """Calculates the area of a circle given its radius."""
+    """Calculate the area of a circle given its radius."""
     return 3.14159 * (radius ** 2)
 
 # Initialize the search tool
@@ -64,3 +64,4 @@ print(f"Question: {question}")
 response = agent_executor.invoke({"input": question})
 
 print(f"\nAnswer: {response['output']}")
+
