@@ -11,7 +11,6 @@ from langchain_classic.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import tool
 
-# --- STEP 0: Setup ---
 load_dotenv()
 
 # --- STEP 1: Define Custom Tools ---
@@ -63,4 +62,5 @@ question = "Search for the radius of the planet Mars in km, then calculate the a
 print(f"Question: {question}")
 
 response = agent_executor.invoke({"input": question})
+
 print(f"\nAnswer: {response['output']}")
