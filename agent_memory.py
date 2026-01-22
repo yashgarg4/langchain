@@ -18,7 +18,6 @@ from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.runnables import RunnableLambda
 
-# --- STEP 0: Setup ---
 load_dotenv()
 
 # --- STEP 1: The Data (PDF) ---
@@ -39,7 +38,7 @@ vectorstore = Chroma.from_documents(
 )
 retriever = vectorstore.as_retriever()
 
-# --- STEP 2: Create Tools ---
+# --- STEP 2: Create Tools
 retriever_tool = create_retriever_tool(
     retriever,
     "pdf_search",
@@ -115,3 +114,4 @@ while True:
 
 # Cleanup
 vectorstore.delete_collection()
+
