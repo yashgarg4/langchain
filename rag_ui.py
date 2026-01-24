@@ -17,7 +17,6 @@ from langchain_community.chat_message_histories import StreamlitChatMessageHisto
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.runnables import RunnableLambda
 
-# --- STEP 0: Setup ---
 load_dotenv()
 
 st.set_page_config(page_title="Gemini RAG Agent", page_icon="🤖")
@@ -126,4 +125,5 @@ if retriever:
                     config={"configurable": {"session_id": "any"}}
                 )
                 st.write(response["output"])
+
 
