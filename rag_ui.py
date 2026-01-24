@@ -85,7 +85,7 @@ def get_agent_executor(_retriever):
 if retriever:
     agent_executor = get_agent_executor(retriever)
 
-    # --- STEP 3: Manage History with Streamlit ---
+    # STEP 3: Manage History with Streamlit 
     # StreamlitChatMessageHistory stores messages in st.session_state.langchain_messages
     msgs = StreamlitChatMessageHistory(key="langchain_messages")
 
@@ -125,6 +125,7 @@ if retriever:
                     config={"configurable": {"session_id": "any"}}
                 )
                 st.write(response["output"])
+
 
 
 
