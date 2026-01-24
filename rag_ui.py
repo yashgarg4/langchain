@@ -2,7 +2,6 @@ import os
 import certifi
 import streamlit as st
 
-# Fix for SSL Certificate Verify Failed error
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
 from dotenv import load_dotenv
@@ -127,3 +126,4 @@ if retriever:
                     config={"configurable": {"session_id": "any"}}
                 )
                 st.write(response["output"])
+
