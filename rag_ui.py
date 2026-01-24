@@ -51,7 +51,7 @@ def get_retriever():
 
 retriever = get_retriever()
 
-# --- STEP 2: Cache Agent Setup ---
+#STEP 2: Cache Agent Setup
 @st.cache_resource
 def get_agent_executor(_retriever):
     # 1. Create Tools
@@ -125,5 +125,6 @@ if retriever:
                     config={"configurable": {"session_id": "any"}}
                 )
                 st.write(response["output"])
+
 
 
