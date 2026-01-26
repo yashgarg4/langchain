@@ -1,7 +1,6 @@
 import os
 import certifi
 
-# Fix for SSL Certificate Verify Failed error
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
 from dotenv import load_dotenv
@@ -52,4 +51,5 @@ print(f"Question: {question}")
 
 # The agent will decide to use the 'search' tool because it doesn't know the answer.
 response = agent_executor.invoke({"input": question})
+
 print(f"\nAnswer: {response['output']}")
