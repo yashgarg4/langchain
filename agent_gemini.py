@@ -12,7 +12,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 # --- STEP 0: Setup ---
 load_dotenv()
 
-# --- STEP 1: Define Tools ---
+# STEP 1: Define Tool
 # Tools are functions the Agent can use. 
 # Tavily is a search engine optimized for LLMs and Agents.
 search = TavilySearchResults()
@@ -53,3 +53,4 @@ print(f"Question: {question}")
 response = agent_executor.invoke({"input": question})
 
 print(f"\nAnswer: {response['output']}")
+
