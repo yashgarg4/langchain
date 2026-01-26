@@ -9,7 +9,6 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_classic.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# --- STEP 0: Setup ---
 load_dotenv()
 
 # STEP 1: Define Tool
@@ -53,4 +52,5 @@ print(f"Question: {question}")
 response = agent_executor.invoke({"input": question})
 
 print(f"\nAnswer: {response['output']}")
+
 
