@@ -9,8 +9,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# --- STEP 0: Setup API Key ---
-# If you haven't set this in your environment variables, this will prompt you.
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 if api_key:
@@ -78,3 +76,4 @@ print(f"\nAnswer: {response}")
 
 # Cleanup (Optional)
 # vectorstore.delete_collection()
+
