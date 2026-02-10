@@ -109,7 +109,7 @@ if retriever:
         output_messages_key="output",
     )
 
-    # --- STEP 4: Render UI ---
+    # STEP 4: Render UI
     # Display previous messages
     for msg in msgs.messages:
         st.chat_message(msg.type).write(msg.content)
@@ -125,6 +125,7 @@ if retriever:
                     config={"configurable": {"session_id": "any"}}
                 )
                 st.write(response["output"])
+
 
 
 
