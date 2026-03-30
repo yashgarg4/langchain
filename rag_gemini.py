@@ -14,7 +14,7 @@ api_key = os.getenv("GOOGLE_API_KEY")
 if api_key:
     print(f"DEBUG: Using API Key: {api_key[:5]}...{api_key[-5:]}")
 
-# --- STEP 1: The Data ---
+# STEP 1: The Data
 # This simulates loading a document.
 raw_text = """
 Gemini is a family of multimodal AI models developed by Google DeepMind. 
